@@ -1,0 +1,14 @@
+com/meisa/tennomc/util/Registration.java
+ com.meisa.tennomc.util.Registration
+com/meisa/tennomc/blocks/ModBlocks.java
+ com.meisa.tennomc.blocks.ModBlocks
+com/meisa/tennomc/TennoMC.java
+ com.meisa.tennomc.TennoMC
+ com.meisa.tennomc.TennoMC$1
+ com.meisa.tennomc.TennoMC$RegistryEvents
+com/meisa/tennomc/items/ModItems.java
+ com.meisa.tennomc.items.ModItems
+com/meisa/tennomc/world/OreType.java
+ com.meisa.tennomc.world.OreType
+com/meisa/tennomc/world/OreGeneration.java
+ com.meisa.tennomc.world.OreGeneration

@@ -4,6 +4,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.monster.SkeletonEntity;
+import net.minecraft.entity.monster.SpiderEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
@@ -14,49 +16,36 @@ import java.util.Random;
 
 public class ItemDropsFromEntities {
 
-    // Alloy plates drop from skeletons
-    @SubscribeEvent
-    public void alloyPlateDrop(LivingDropsEvent event) {
+    private static int getDropCount(int minDropCount, int maxDropCount) {
+        final int dropModifier = maxDropCount - minDropCount + 1;
+        return new Random().nextInt(dropModifier) + minDropCount;
+    }
 
-        final int minDropCount = 3;
-        final int maxDropCount = 6;
+    public static void dropResources(LivingDropsEvent event, Item item, int minDropCount, int maxDropCount, float dropChance) {
 
-        final int dropModifier = minDropCount + maxDropCount + 1;
-        final int dropCount = new Random().nextInt(dropModifier) + minDropCount;
+        final int randRange = (int) (100 / (dropChance * 100));
+        boolean dropItem = new Random().nextInt(randRange) == 0;
 
+        if (!dropItem) { return; }
+
+        final int dropCount = getDropCount(minDropCount, maxDropCount);
         LivingEntity entity = event.getEntityLiving();
 
-        if (entity instanceof SkeletonEntity) {
-            World world = entity.level;
-            Collection<ItemEntity> drops = event.getDrops();
+        World world = entity.level;
+        Collection<ItemEntity> drops = event.getDrops();
 
-            for (int i = 0; i < dropCount; i++) {
-                drops.add(new ItemEntity(world, entity.getX(), entity.getY(), entity.getZ(),
-                        new ItemStack(Resources.ALLOY_PLATE.get())));
-            }
+        for (int i = 0; i < dropCount; i++) {
+            drops.add(new ItemEntity(world, entity.getX(), entity.getY(), entity.getZ(), new ItemStack(item)));
         }
     }
 
-    // Neurodes drop from creepers
+    // Alloy plates drop from skeletons
     @SubscribeEvent
-    public void neurodeDrop(LivingDropsEvent event) {
+    public void onEntityDeath(LivingDropsEvent event) {
+        LivingEntity source = event.getEntityLiving();
 
-        // 5% chance to drop
-        boolean dropItem = new Random().nextInt(20)==0;
-
-        if (!dropItem) {
-            return;
-        }
-
-        LivingEntity entity = event.getEntityLiving();
-
-        if (entity instanceof CreeperEntity) {
-            World world = entity.level;
-            Collection<ItemEntity> drops = event.getDrops();
-
-            drops.add(new ItemEntity(world, entity.getX(), entity.getY(), entity.getZ(),
-                    new ItemStack(Resources.NEURODE.get())));
-
-        }
+        if (source instanceof SkeletonEntity) { dropResources(event, Resources.ALLOY_PLATE.get(), 3, 6, 0.8f); }
+        if (source instanceof CreeperEntity) { dropResources(event, Resources.NEURODE.get(), 1, 1, 0.05f); }
+        if (source instanceof SpiderEntity) { dropResources(event, Resources.PLASTIDS.get(), 2, 3, 0.8f); }
     }
 }

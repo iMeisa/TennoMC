@@ -11,12 +11,14 @@ public class Resources {
     public static final RegistryObject<Item> ALLOY_PLATE =
             Registration.ITEMS.register("alloy_plate",
                     () -> new Item(new Item.Properties()
-                            .tab(TennoMC.TAB_TENNO)));
+                            .tab(TennoMC.TAB_TENNO)
+                            .rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> FERRITE =
             Registration.ITEMS.register("ferrite",
                     () -> new Item(new Item.Properties()
-                            .tab(TennoMC.TAB_TENNO)));
+                            .tab(TennoMC.TAB_TENNO)
+                            .rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> NEURODE =
             Registration.ITEMS.register("neurode",
@@ -24,10 +26,17 @@ public class Resources {
                             .tab(TennoMC.TAB_TENNO)
                             .rarity(Rarity.RARE)));
 
+    public static final RegistryObject<Item> PLASTIDS =
+            Registration.ITEMS.register("plastids",
+                    () -> new Item(new Item.Properties()
+                            .tab(TennoMC.TAB_TENNO)
+                            .rarity(Rarity.UNCOMMON)));
+
     public static final RegistryObject<Item> RUBEDO =
             Registration.ITEMS.register("rubedo",
                     () -> new Item(new Item.Properties()
-                            .tab(TennoMC.TAB_TENNO)));
+                            .tab(TennoMC.TAB_TENNO)
+                            .rarity(Rarity.UNCOMMON)));
 
     public static void register () {}
 

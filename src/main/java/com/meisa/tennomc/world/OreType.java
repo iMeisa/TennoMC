@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 
 public enum OreType {
 
-    FERRITE(Deposits.FERRITE_DEPOSIT.get(), 10, 20, 80),
-    RUBEDO(Deposits.RUBEDO_DEPOSIT.get(), 15, 20, 75);
+    FERRITE(Deposits.FERRITE_DEPOSIT.get(), 15, 20, 80),
+    RUBEDO(Deposits.RUBEDO_DEPOSIT.get(), 8, 15, 75);
 
 
     private final Block block;

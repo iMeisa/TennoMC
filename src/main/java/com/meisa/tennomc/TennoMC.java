@@ -1,7 +1,8 @@
 package com.meisa.tennomc;
 
-import com.meisa.tennomc.blocks.ModBlocks;
-import com.meisa.tennomc.items.ModItems;
+import com.meisa.tennomc.blocks.Deposits;
+import com.meisa.tennomc.items.ItemDropsFromEntities;
+import com.meisa.tennomc.items.Resources;
 import com.meisa.tennomc.util.Registration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -36,16 +37,17 @@ public class TennoMC {
     public static final ItemGroup TAB_TENNO = new ItemGroup("tabTenno") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.FERRITE.get());
+            return new ItemStack(Resources.NEURODE.get());
         }
     };
 
     public TennoMC() {
 
         Registration.register();
-        ModItems.register();
-        ModBlocks.register();
+        Resources.register();
+        Deposits.register();
 
+        MinecraftForge.EVENT_BUS.register(new ItemDropsFromEntities());
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);

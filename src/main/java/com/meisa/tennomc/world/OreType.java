@@ -1,6 +1,6 @@
 package com.meisa.tennomc.world;
 
-import com.meisa.tennomc.blocks.ModBlocks;
+import com.meisa.tennomc.blocks.Deposits;
 import net.minecraft.block.Block;
 
 import javax.annotation.Nullable;
@@ -14,8 +14,8 @@ import javax.annotation.Nullable;
 
 public enum OreType {
 
-    FERRITE(ModBlocks.FERRITE_DEPOSIT.get(), 10, 20, 80),
-    RUBEDO(ModBlocks.RUBEDO_DEPOSIT.get(), 15, 20, 75);
+    FERRITE(Deposits.FERRITE_DEPOSIT.get(), 10, 20, 80),
+    RUBEDO(Deposits.RUBEDO_DEPOSIT.get(), 15, 20, 75);
 
 
     private final Block block;

@@ -12,7 +12,7 @@ import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
 
-public class ModBlocks {
+public class Deposits {
 
     public static final RegistryObject<Block> FERRITE_DEPOSIT = register("ferrite_deposit",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE)

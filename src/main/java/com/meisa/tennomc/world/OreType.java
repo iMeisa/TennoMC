@@ -3,6 +3,15 @@ package com.meisa.tennomc.world;
 import com.meisa.tennomc.blocks.ModBlocks;
 import net.minecraft.block.Block;
 
+import javax.annotation.Nullable;
+
+
+/*
+***
+*** Update this for ore generation
+***
+ */
+
 public enum OreType {
 
     FERRITE(ModBlocks.FERRITE_DEPOSIT.get(), 20, 20, 90);
@@ -37,6 +46,7 @@ public enum OreType {
         return maxHeight;
     }
 
+    @Nullable
     public static OreType get(Block block) {
         for(OreType ore : values()) {
             if (block == ore.block) {

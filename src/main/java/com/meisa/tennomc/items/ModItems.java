@@ -12,6 +12,11 @@ public class ModItems {
                     () -> new Item(new Item.Properties()
                             .tab(TennoMC.TAB_TENNO)));
 
+    public static final RegistryObject<Item> RUBEDO =
+            Registration.ITEMS.register("rubedo",
+                    () -> new Item(new Item.Properties()
+                            .tab(TennoMC.TAB_TENNO)));
+
     public static void register () {}
 
 }

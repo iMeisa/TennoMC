@@ -8,6 +8,11 @@ import net.minecraftforge.fml.RegistryObject;
 
 public class Resources {
 
+    public static final RegistryObject<Item> ALLOY_PLATE =
+            Registration.ITEMS.register("alloy_plate",
+                    () -> new Item(new Item.Properties()
+                            .tab(TennoMC.TAB_TENNO)));
+
     public static final RegistryObject<Item> FERRITE =
             Registration.ITEMS.register("ferrite",
                     () -> new Item(new Item.Properties()

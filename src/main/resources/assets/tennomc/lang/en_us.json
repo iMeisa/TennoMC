@@ -2,5 +2,7 @@
   "item.tennomc.ferrite": "Ferrite",
   "block.tennomc.ferrite_deposit": "Ferrite Deposit",
   "item.tennomc.rubedo": "Rubedo",
-  "block.tennomc.rubedo_deposit": "Rubedo Deposit"
+  "block.tennomc.rubedo_deposit": "Rubedo Deposit",
+
+  "itemGroup.tabTenno": "TennoMC"
 }

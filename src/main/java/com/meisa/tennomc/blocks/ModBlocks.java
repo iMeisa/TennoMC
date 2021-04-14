@@ -15,13 +15,19 @@ import java.util.function.Supplier;
 public class ModBlocks {
 
     public static final RegistryObject<Block> FERRITE_DEPOSIT = register("ferrite_deposit",
-            () -> new Block(AbstractBlock.Properties.of(Material.METAL)
-                            .strength(3f)
-                            .sound(SoundType.STONE)));
+            () -> new Block(AbstractBlock.Properties.of(Material.STONE)
+                    .strength(3f)
+                    .sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> ARGON_DEPOSIT = register("argon_deposit",
             () -> new Block(AbstractBlock.Properties.of(Material.METAL)
-                    .strength(5f).sound(SoundType.METAL)));
+                    .strength(5f)
+                    .sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> RUBEDO_DEPOSIT = register("rubedo_deposit",
+            () -> new Block(AbstractBlock.Properties.of(Material.STONE)
+                    .strength(3f)
+                    .sound(SoundType.STONE)));
 
 
     public static void register () {}

@@ -2,10 +2,12 @@
   "item.tennomc.alloy_plate": "Alloy Plate",
   "item.tennomc.ferrite": "Ferrite",
   "block.tennomc.ferrite_deposit": "Ferrite Deposit",
+  "item.tennomc.nano_spores": "Nano Spores",
   "item.tennomc.neurode": "Neurode",
   "item.tennomc.plastids": "Plastids",
   "item.tennomc.rubedo": "Rubedo",
   "block.tennomc.rubedo_deposit": "Rubedo Deposit",
+  "item.tennomc.salvage": "Salvage",
 
   "itemGroup.tabTenno": "TennoMC"
 }

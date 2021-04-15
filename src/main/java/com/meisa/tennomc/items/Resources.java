@@ -21,6 +21,12 @@ public class Resources {
                             .tab(TennoMC.TAB_TENNO)
                             .rarity(Rarity.COMMON)));
 
+    public static final RegistryObject<Item> MORPHICS =
+            Registration.ITEMS.register("morphics",
+                    () -> new Item(new Item.Properties()
+                            .tab(TennoMC.TAB_TENNO)
+                            .rarity(Rarity.RARE)));
+
     public static final RegistryObject<Item> NANO_SPORES =
             Registration.ITEMS.register("nano_spores",
                     () -> new Item(new Item.Properties()

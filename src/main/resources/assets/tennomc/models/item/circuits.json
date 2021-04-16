@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tennomc:item/morphics"
+    "layer0": "tennomc:item/circuits"
   }
 }

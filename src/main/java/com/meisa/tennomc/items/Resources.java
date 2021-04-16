@@ -15,6 +15,12 @@ public class Resources {
                             .tab(TennoMC.TAB_TENNO)
                             .rarity(Rarity.COMMON)));
 
+    public static final RegistryObject<Item> CIRCUITS =
+            Registration.ITEMS.register("circuits",
+                    () -> new Item(new Item.Properties()
+                            .tab(TennoMC.TAB_TENNO)
+                            .rarity(Rarity.UNCOMMON)));
+
     public static final RegistryObject<Item> FERRITE =
             Registration.ITEMS.register("ferrite",
                     () -> new Item(new Item.Properties()

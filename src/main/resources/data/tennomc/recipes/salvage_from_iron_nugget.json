@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "group": "",
-  "ingredients": [
-    {"item": "minecraft:iron_ingot"}
-  ],
+  "ingredients": [{"item": "minecraft:iron_nugget"}],
   "result": {
     "item": "tennomc:salvage",
     "count": 9

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "yyy"
+  ],
+  "key": {
+    "x": { "item": "minecraft:redstone"},
+    "y": { "item": "tennomc:salvage" }
+  },
+  "result": { "item": "tennomc:circuits" }
+}

@@ -5,12 +5,6 @@
     "xxx",
     "xxx"
   ],
-  "key": {
-    "x": {
-      "item": "tennomc:salvage"
-    }
-  },
-  "result": {
-    "item": "minecraft:iron_ingot"
-  }
+  "key": { "x": { "item": "tennomc:salvage" } },
+  "result": { "item": "minecraft:iron_ingot" }
 }

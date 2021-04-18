@@ -48,7 +48,7 @@ public class OreGeneration {
                 if(!biome.getBiomeCategory().equals(Biome.Category.NETHER)
                     && !biome.getBiomeCategory().equals(Biome.Category.THEEND)) {
 
-                    addFeatureToBiome(biome, GenerationStage.Decoration.UNDERGROUND_ORES,
+                    addFeatureToBiome(biome, ore.getDecoration(),
                             WorldGenRegistries.CONFIGURED_FEATURE.get(ore.getBlock().getRegistryName()));
                 }
             }

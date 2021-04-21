@@ -1,7 +1,8 @@
-package com.meisa.tennomc.world;
+package com.meisa.tennomc.world.gen;
 
 import com.google.common.collect.Lists;
 import com.meisa.tennomc.TennoMC;
+import com.meisa.tennomc.world.OreType;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -48,7 +49,7 @@ public class OreGeneration {
                 if(!biome.getBiomeCategory().equals(Biome.Category.NETHER)
                     && !biome.getBiomeCategory().equals(Biome.Category.THEEND)) {
 
-                    addFeatureToBiome(biome, GenerationStage.Decoration.UNDERGROUND_ORES,
+                    addFeatureToBiome(biome, ore.getDecoration(),
                             WorldGenRegistries.CONFIGURED_FEATURE.get(ore.getBlock().getRegistryName()));
                 }
             }

@@ -3,12 +3,12 @@ package com.meisa.tennomc;
 import com.meisa.tennomc.blocks.Deposits;
 import com.meisa.tennomc.blocks.ModBlocks;
 import com.meisa.tennomc.events.ItemDropsFromEntities;
+import com.meisa.tennomc.items.Blueprints;
 import com.meisa.tennomc.items.Resources;
 import com.meisa.tennomc.items.Swords;
 import com.meisa.tennomc.setup.ClientProxy;
 import com.meisa.tennomc.setup.IProxy;
 import com.meisa.tennomc.setup.ServerProxy;
-import com.meisa.tennomc.util.Registration;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -55,14 +55,12 @@ public class TennoMC {
 
     private void registerModAdditions() {
 
-        // Inits additions
-        Registration.init();
-
         // Inits in game items
         Resources.register();
         Deposits.register();
         ModBlocks.register();
         Swords.register();
+        Blueprints.register();
 
         // Inits events
         MinecraftForge.EVENT_BUS.register(new ItemDropsFromEntities());

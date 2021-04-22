@@ -1,22 +1,26 @@
 package com.meisa.tennomc.items;
 
 import com.meisa.tennomc.TennoMC;
-import com.meisa.tennomc.util.Registration;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class Swords {
 
+    private static final DeferredRegister<Item> SWORDS = DeferredRegister.create(ForgeRegistries.ITEMS, TennoMC.MOD_ID);
+
     public static final RegistryObject<Item> SKANA =
-            Registration.ITEMS.register("skana",
+            SWORDS.register("skana",
                     () -> new SwordItem(SwordTier.ONE_HANDED, 2, 1,
                             new Item.Properties().tab(TennoMC.TAB_TENNO)));
 
 
-    public static void register() {}
+    public static void register() { SWORDS.register(FMLJavaModLoadingContext.get().getModEventBus()); }
 
     public enum SwordTier implements IItemTier {
         ONE_HANDED(1000, 1, 1, 1, 1, Ingredient.of(Resources.MORPHICS.get()));

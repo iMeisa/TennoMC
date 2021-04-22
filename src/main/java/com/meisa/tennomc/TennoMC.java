@@ -1,6 +1,7 @@
 package com.meisa.tennomc;
 
 import com.meisa.tennomc.blocks.Deposits;
+import com.meisa.tennomc.blocks.ModBlocks;
 import com.meisa.tennomc.events.ItemDropsFromEntities;
 import com.meisa.tennomc.items.Resources;
 import com.meisa.tennomc.items.Swords;
@@ -60,6 +61,7 @@ public class TennoMC {
         // Inits in game items
         Resources.register();
         Deposits.register();
+        ModBlocks.register();
         Swords.register();
 
         // Inits events

@@ -12,27 +12,29 @@ public class Swords {
 
     public static final RegistryObject<Item> SKANA =
             Registration.ITEMS.register("skana",
-                    () -> new SwordItem(SwordTier.ONE_HANDED, 3, 2,
+                    () -> new SwordItem(SwordTier.ONE_HANDED, 2, 1,
                             new Item.Properties().tab(TennoMC.TAB_TENNO)));
 
 
     public static void register() {}
 
     public enum SwordTier implements IItemTier {
-        ONE_HANDED(1000, 2, 3, 1, 1);
+        ONE_HANDED(1000, 1, 1, 1, 1, Ingredient.of(Resources.MORPHICS.get()));
 
         private final int maxUses;
         private final int speed;
         private final int attackBonus;
         private final int harvestLevel;
         private final int enchantability;
+        private final Ingredient repairIngredient;
 
-        SwordTier(int maxUses, int speed, int attackBonus, int harvestLevel, int enchantability) {
+        SwordTier(int maxUses, int speed, int attackBonus, int harvestLevel, int enchantability, Ingredient repairIngredient) {
             this.maxUses = maxUses;
             this.speed = speed;
             this.attackBonus = attackBonus;
             this.harvestLevel = harvestLevel;
             this.enchantability = enchantability;
+            this.repairIngredient = repairIngredient;
         }
 
 
@@ -63,7 +65,7 @@ public class Swords {
 
         @Override
         public Ingredient getRepairIngredient() {
-            return null;
+            return repairIngredient;
         }
     }
 }

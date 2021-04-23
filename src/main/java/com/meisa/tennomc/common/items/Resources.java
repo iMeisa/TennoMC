@@ -12,8 +12,8 @@ public class Resources {
     
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TennoMC.MOD_ID);
 
-    public static final RegistryObject<Item> ALLOY_PLATE =
-            ITEMS.register("alloy_plate",
+    public static final RegistryObject<Item> ALLOY_PLATES =
+            ITEMS.register("alloy_plates",
                     () -> new Item(new Item.Properties()
                             .tab(TennoMC.TAB_TENNO)
                             .rarity(Rarity.COMMON)));

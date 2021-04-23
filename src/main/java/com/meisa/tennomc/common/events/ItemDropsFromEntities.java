@@ -45,7 +45,7 @@ public class ItemDropsFromEntities {
     public void onEntityDeath(LivingDropsEvent event) {
         LivingEntity source = event.getEntityLiving();
 
-        if (source instanceof SkeletonEntity) { dropResources(event, Resources.ALLOY_PLATE.get(), 3, 6, 0.8f); }
+        if (source instanceof SkeletonEntity) { dropResources(event, Resources.ALLOY_PLATES.get(), 3, 6, 0.8f); }
         if (source instanceof CreeperEntity) { dropResources(event, Resources.NEURODE.get(), 1, 1, 0.05f); }
         if (source instanceof SpiderEntity) { dropResources(event, Resources.PLASTIDS.get(), 2, 3, 0.8f); }
     }

@@ -19,7 +19,7 @@ public class Blueprints {
 
 
     // Resources
-    private static final ResourceLocation ALLOY_PLATE = getModResourceLocation("alloy_plate");
+    private static final ResourceLocation ALLOY_PLATES = getModResourceLocation("alloy_plates");
     private static final ResourceLocation MORPHICS = getModResourceLocation("morphics");
     private static final ResourceLocation PLASTIDS = getModResourceLocation("plastids");
     private static final ResourceLocation SALVAGE = getModResourceLocation("salvage");
@@ -32,7 +32,7 @@ public class Blueprints {
             Arrays.asList(
                     new Resource(SALVAGE, 75),
                     new Resource(PLASTIDS, 50),
-                    new Resource(ALLOY_PLATE, 110),
+                    new Resource(ALLOY_PLATES, 110),
                     new Resource(MORPHICS, 1)
             );
     public static final RegistryObject<Item> SKANA_BLUEPRINT =

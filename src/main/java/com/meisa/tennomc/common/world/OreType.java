@@ -1,6 +1,6 @@
-package com.meisa.tennomc.world;
+package com.meisa.tennomc.common.world;
 
-import com.meisa.tennomc.blocks.Deposits;
+import com.meisa.tennomc.common.blocks.Deposits;
 import net.minecraft.block.Block;
 import net.minecraft.world.gen.GenerationStage;
 

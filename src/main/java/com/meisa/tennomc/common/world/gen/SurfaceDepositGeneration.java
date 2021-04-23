@@ -1,7 +1,7 @@
-package com.meisa.tennomc.world.gen;
+package com.meisa.tennomc.common.world.gen;
 
 import com.meisa.tennomc.TennoMC;
-import com.meisa.tennomc.blocks.Deposits;
+import com.meisa.tennomc.common.blocks.Deposits;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

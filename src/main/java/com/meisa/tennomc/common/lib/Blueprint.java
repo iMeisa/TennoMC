@@ -1,10 +1,11 @@
-package com.meisa.tennomc.items;
+package com.meisa.tennomc.common.lib;
 
-import com.meisa.tennomc.util.StringRenamer;
+import com.meisa.tennomc.common.util.StringRenamer;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
@@ -23,15 +24,8 @@ public class Blueprint extends Item {
         this.outputItem = outputItem;
     }
 
-
-    public static class Resource {
-        public final ResourceLocation resourceLocation;
-        public final int amount;
-
-        public Resource(ResourceLocation resourceLocation, int amount) {
-            this.resourceLocation = resourceLocation;
-            this.amount = amount;
-        }
+    public Item outputAsItem() {
+        return Registry.ITEM.get(this.outputItem);
     }
 
     @Override

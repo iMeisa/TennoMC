@@ -1,4 +1,4 @@
-package com.meisa.tennomc.items;
+package com.meisa.tennomc.common.items;
 
 import com.meisa.tennomc.TennoMC;
 import net.minecraft.item.IItemTier;

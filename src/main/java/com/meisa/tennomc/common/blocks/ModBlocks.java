@@ -1,4 +1,4 @@
-package com.meisa.tennomc.blocks;
+package com.meisa.tennomc.common.blocks;
 
 import com.meisa.tennomc.TennoMC;
 import net.minecraft.block.AbstractBlock;

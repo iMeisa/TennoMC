@@ -1,4 +1,4 @@
-package com.meisa.tennomc.util;
+package com.meisa.tennomc.common.util;
 
 public class StringRenamer {
 

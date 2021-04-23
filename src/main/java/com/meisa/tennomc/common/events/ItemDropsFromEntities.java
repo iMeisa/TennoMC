@@ -1,6 +1,6 @@
-package com.meisa.tennomc.events;
+package com.meisa.tennomc.common.events;
 
-import com.meisa.tennomc.items.Resources;
+import com.meisa.tennomc.common.items.Resources;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.monster.CreeperEntity;

@@ -1,6 +1,8 @@
-package com.meisa.tennomc.items;
+package com.meisa.tennomc.common.items;
 
 import com.meisa.tennomc.TennoMC;
+import com.meisa.tennomc.common.lib.Blueprint;
+import com.meisa.tennomc.common.lib.Resource;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
@@ -24,12 +26,12 @@ public class Blueprints {
     private static final ResourceLocation SKANA = getModResourceLocation("skana");
 
 
-    private static final List<Blueprint.Resource> SKANA_RESOURCES =
+    private static final List<Resource> SKANA_RESOURCES =
             Arrays.asList(
-                    new Blueprint.Resource(SALVAGE, 75),
-                    new Blueprint.Resource(PLASTIDS, 50),
-                    new Blueprint.Resource(ALLOY_PLATES, 110),
-                    new Blueprint.Resource(MORPHICS, 1)
+                    new Resource(SALVAGE, 75),
+                    new Resource(PLASTIDS, 50),
+                    new Resource(ALLOY_PLATES, 110),
+                    new Resource(MORPHICS, 1)
             );
     public static final RegistryObject<Item> SKANA_BLUEPRINT =
             BLUEPRINTS.register("skana_blueprint",

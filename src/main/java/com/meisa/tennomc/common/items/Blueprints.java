@@ -18,24 +18,26 @@ public class Blueprints {
     private static final DeferredRegister<Item> BLUEPRINTS = DeferredRegister.create(ForgeRegistries.ITEMS, TennoMC.MOD_ID);
 
 
-    private static final ResourceLocation ALLOY_PLATES = getModResourceLocation("alloy_plates");
+    // Resources
+    private static final ResourceLocation ALLOY_PLATE = getModResourceLocation("alloy_plate");
     private static final ResourceLocation MORPHICS = getModResourceLocation("morphics");
     private static final ResourceLocation PLASTIDS = getModResourceLocation("plastids");
     private static final ResourceLocation SALVAGE = getModResourceLocation("salvage");
 
-    private static final ResourceLocation SKANA = getModResourceLocation("skana");
+    // Output Items
+    private static final Resource SKANA = new Resource(getModResourceLocation("skana"));
 
 
     private static final List<Resource> SKANA_RESOURCES =
             Arrays.asList(
                     new Resource(SALVAGE, 75),
                     new Resource(PLASTIDS, 50),
-                    new Resource(ALLOY_PLATES, 110),
+                    new Resource(ALLOY_PLATE, 110),
                     new Resource(MORPHICS, 1)
             );
     public static final RegistryObject<Item> SKANA_BLUEPRINT =
             BLUEPRINTS.register("skana_blueprint",
-                    () -> new Blueprint(new Item.Properties().tab(TennoMC.TAB_TENNO), 
+                    () -> new Blueprint(new Item.Properties().tab(TennoMC.TAB_TENNO),
                             SKANA_RESOURCES,
                             SKANA)
             );

@@ -1,7 +1,8 @@
 package com.meisa.tennomc.common.blocks;
 
 import com.meisa.tennomc.common.lib.Blueprint;
-import com.meisa.tennomc.common.util.StringRenamer;
+import com.meisa.tennomc.common.lib.Resource;
+import com.meisa.tennomc.common.util.InventoryStuff;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
@@ -19,7 +20,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
@@ -42,14 +42,17 @@ public class Foundry extends Block {
         Item item = player.getItemInHand(hand).getItem();
         if (item instanceof Blueprint) {
             Blueprint blueprint = (Blueprint) item;
-            String msg = "You used a blueprint! (" + StringRenamer.snakeToText(blueprint.getRegistryName().getPath()) + ")";
-            player.sendMessage(new StringTextComponent(msg), player.getUUID());
 
-            player.addItem(new ItemStack(blueprint.outputAsItem()));
-            player.getMainHandItem().shrink(1);
+            if (blueprint.hasEnoughResources(player.inventory)) {
+                player.addItem(new ItemStack(blueprint.outputItem.asItem()));
+                player.getMainHandItem().shrink(1);
 
-            msg = player.inventory.items.toString();
-            player.sendMessage(new StringTextComponent(msg), player.getUUID());
+                for (Resource resource : blueprint.resources) {
+                    InventoryStuff.removeItems(player.inventory, resource.asItem(), resource.amount);
+                }
+            } else {
+                if (player.level.isClientSide) { player.sendMessage(new StringTextComponent("Not enough resources"), player.getUUID()); }
+            }
         }
 
         return super.use(state, world, pos, player, hand, rayTraceResult);

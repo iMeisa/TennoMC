@@ -7,12 +7,20 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.1.+', changing: true
     }
 }
+repositories {
+    maven {
+        url 'https://maven.theillusivec4.top'
+    }
+    maven {
+        url 'http://dvs1.progwml6.com/files/maven'
+    }
+}
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.0.1.1-alpha'
+version = '0.0.1.2-alpha'
 group = 'com.meisa.tennomc' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'tennomc'
 
@@ -125,6 +133,9 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.16.5-36.1.4'
+
+    compileOnly fg.deobf('mezz.jei:jei-1.16.5:7.6.4.88:api')
+    runtimeOnly fg.deobf('mezz.jei:jei-1.16.5:7.6.4.88')
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

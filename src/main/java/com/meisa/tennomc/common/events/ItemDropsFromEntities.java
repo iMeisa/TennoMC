@@ -40,7 +40,7 @@ public class ItemDropsFromEntities {
         }
     }
 
-    // Alloy plates drop from skeletons
+    // Mob drops
     @SubscribeEvent
     public void onEntityDeath(LivingDropsEvent event) {
         LivingEntity source = event.getEntityLiving();

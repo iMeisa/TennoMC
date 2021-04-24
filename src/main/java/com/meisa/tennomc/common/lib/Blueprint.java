@@ -6,8 +6,6 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
@@ -24,10 +22,6 @@ public class Blueprint extends Item {
         super(properties);
         this.resources = resources;
         this.outputItem = outputItem;
-    }
-
-    public Item outputAsItem() {
-        return Registry.ITEM.get(this.outputItem.resourceLocation);
     }
 
     public boolean hasEnoughResources(PlayerInventory inventory) {

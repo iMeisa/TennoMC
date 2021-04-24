@@ -1,6 +1,7 @@
 {
   "item.tennomc.alloy_plates": "Alloy Plates",
   "item.tennomc.argon_deposit": "Argon Deposit",
+  "item.tennomc.blueprint": "Blueprint",
   "item.tennomc.circuits": "Circuits",
   "item.tennomc.ferrite": "Ferrite",
   "block.tennomc.ferrite_deposit": "Ferrite Deposit",
@@ -16,5 +17,5 @@
   "item.tennomc.skana": "Skana",
   "item.tennomc.skana_blueprint": "Skana Blueprint",
 
-  "itemGroup.tabTenno": "TennoMC"
+  "itemGroup.tabtenno": "TennoMC"
 }

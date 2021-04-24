@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tennomc:skana_blueprint"
+    ]
+  },
+  "criteria": {
+    "morphics": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "tennomc:morphics"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tennomc:skana_blueprint"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "morphics",
+      "has_the_recipe"
+    ]
+  ]
+}

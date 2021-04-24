@@ -28,6 +28,12 @@ public class Blueprints {
     private static final Resource SKANA = new Resource(getModResourceLocation("skana"));
 
 
+    public static final RegistryObject<Item> BLUEPRINT =
+            BLUEPRINTS.register("blueprint",
+                    () -> new Item(new Item.Properties()
+                            .tab(TennoMC.TAB_TENNO)
+                            .stacksTo(16)));
+
     private static final List<Resource> SKANA_RESOURCES =
             Arrays.asList(
                     new Resource(SALVAGE, 75),

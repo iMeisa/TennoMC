@@ -54,6 +54,12 @@ public class Resources {
                             .tab(TennoMC.TAB_TENNO)
                             .rarity(Rarity.UNCOMMON)));
 
+    public static final RegistryObject<Item> POLYMER_BUNDLE =
+            ITEMS.register("polymer_bundle",
+                    () -> new Item(new Item.Properties()
+                            .tab(TennoMC.TAB_TENNO)
+                            .rarity(Rarity.UNCOMMON)));
+
     public static final RegistryObject<Item> RUBEDO =
             ITEMS.register("rubedo",
                     () -> new Item(new Item.Properties()

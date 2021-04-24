@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tennomc:morphics"
+    },
+    {
+      "item": "tennomc:blueprint"
+    }
+  ],
+  "result": {
+    "item": "tennomc:skana_blueprint"
+  }
+}

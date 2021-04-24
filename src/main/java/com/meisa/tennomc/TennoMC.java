@@ -29,7 +29,7 @@ public class TennoMC {
     private static final Logger LOGGER = LogManager.getLogger();
 
 
-    public static final ItemGroup TAB_TENNO = new ItemGroup("tabTenno") {
+    public static final ItemGroup TAB_TENNO = new ItemGroup("tabtenno") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(Resources.NEURODE.get());

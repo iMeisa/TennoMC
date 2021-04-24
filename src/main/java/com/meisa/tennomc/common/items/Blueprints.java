@@ -20,13 +20,15 @@ public class Blueprints {
 
     // Resources
     private static final ResourceLocation ALLOY_PLATES = getModResourceLocation("alloy_plates");
+    private static final ResourceLocation FERRITE = getModResourceLocation("ferrite");
     private static final ResourceLocation MORPHICS = getModResourceLocation("morphics");
     private static final ResourceLocation PLASTIDS = getModResourceLocation("plastids");
+    private static final ResourceLocation RUBEDO = getModResourceLocation("rubedo");
     private static final ResourceLocation SALVAGE = getModResourceLocation("salvage");
 
     // Output Items
     private static final Resource SKANA = new Resource(getModResourceLocation("skana"));
-
+    private static final Resource ETHER_SWORD = new Resource(getModResourceLocation("ether_sword"));
 
     public static final RegistryObject<Item> BLUEPRINT =
             BLUEPRINTS.register("blueprint",
@@ -47,6 +49,20 @@ public class Blueprints {
                             SKANA_RESOURCES,
                             SKANA)
             );
+
+    private static final List<Resource> ETHER_SWORD_RESOURCES =
+            Arrays.asList(
+                    new Resource(MORPHICS, 4),
+                    new Resource(RUBEDO, 70 ),
+                    new Resource(FERRITE, 90),
+                    new Resource(ALLOY_PLATES, 70)
+            );
+    public static final RegistryObject<Item> ETHER_SWORD_BLUEPRINT =
+            BLUEPRINTS.register("ether_sword_blueprint",
+                    () -> new Blueprint(new Item.Properties().tab(TennoMC.TAB_TENNO),
+                            ETHER_SWORD_RESOURCES,
+                            ETHER_SWORD));
+
 
     public static void register() { BLUEPRINTS.register(FMLJavaModLoadingContext.get().getModEventBus()); }
 

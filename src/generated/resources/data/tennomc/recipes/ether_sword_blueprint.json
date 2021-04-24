@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tennomc:salvage"
+      "item": "tennomc:rubedo"
     },
     {
-      "item": "tennomc:plastids"
+      "item": "tennomc:ferrite"
     },
     {
       "item": "tennomc:alloy_plates"
@@ -15,6 +15,6 @@
     }
   ],
   "result": {
-    "item": "tennomc:skana_blueprint"
+    "item": "tennomc:ether_sword_blueprint"
   }
 }

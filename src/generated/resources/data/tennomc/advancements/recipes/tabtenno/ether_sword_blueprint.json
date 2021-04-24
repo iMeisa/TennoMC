@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "tennomc:skana_blueprint"
+      "tennomc:ether_sword_blueprint"
     ]
   },
   "criteria": {
-    "morphics": {
+    "rubedo": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "tennomc:salvage"
+            "item": "tennomc:rubedo"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "tennomc:skana_blueprint"
+        "recipe": "tennomc:ether_sword_blueprint"
       }
     }
   },
   "requirements": [
     [
-      "morphics",
+      "rubedo",
       "has_the_recipe"
     ]
   ]

@@ -14,6 +14,11 @@ public class Swords {
 
     private static final DeferredRegister<Item> SWORDS = DeferredRegister.create(ForgeRegistries.ITEMS, TennoMC.MOD_ID);
 
+    public static final RegistryObject<Item> ETHER_SWORD =
+            SWORDS.register("ether_sword",
+                    () -> new SwordItem(SwordTier.ONE_HANDED, 2, 1,
+                            new Item.Properties().tab(TennoMC.TAB_TENNO)));
+
     public static final RegistryObject<Item> SKANA =
             SWORDS.register("skana",
                     () -> new SwordItem(SwordTier.ONE_HANDED, 2, 1,

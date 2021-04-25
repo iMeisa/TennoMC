@@ -23,6 +23,7 @@ public class ItemResourceProvider extends ItemModelProvider {
 
         ModelFile itemHandheld = getExistingFile(mcLoc("item/handheld"));
         builder(itemHandheld, "skana");
+        builder(itemHandheld, "ether_sword");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {

@@ -16,19 +16,19 @@ public class Swords {
 
     public static final RegistryObject<Item> ETHER_SWORD =
             SWORDS.register("ether_sword",
-                    () -> new SwordItem(SwordTier.ONE_HANDED, 2, 1,
+                    () -> new SwordItem(SwordTier.ONE_HANDED, 1, 0,
                             new Item.Properties().tab(TennoMC.TAB_TENNO)));
 
     public static final RegistryObject<Item> SKANA =
             SWORDS.register("skana",
-                    () -> new SwordItem(SwordTier.ONE_HANDED, 2, 1,
+                    () -> new SwordItem(SwordTier.ONE_HANDED, 0, -1,
                             new Item.Properties().tab(TennoMC.TAB_TENNO)));
 
 
     public static void register() { SWORDS.register(FMLJavaModLoadingContext.get().getModEventBus()); }
 
     public enum SwordTier implements IItemTier {
-        ONE_HANDED(1000, 1, 1, 1, 1, Ingredient.of(Resources.MORPHICS.get()));
+        ONE_HANDED(1000, 0, 5, 1, 1, Ingredient.of(Resources.MORPHICS.get()));
 
         private final int maxUses;
         private final int speed;

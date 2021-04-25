@@ -19,8 +19,10 @@ public class ItemResourceProvider extends ItemModelProvider {
         withExistingParent("rubedo_deposit", modLoc("block/rubedo_deposit"));
 
         ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
-
         builder(itemGenerated, "blueprint");
+
+        ModelFile itemHandheld = getExistingFile(mcLoc("item/handheld"));
+        builder(itemHandheld, "skana");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {

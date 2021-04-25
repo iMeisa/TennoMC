@@ -46,7 +46,8 @@ public class Resources {
             ITEMS.register("neurode",
                     () -> new Item(new Item.Properties()
                             .tab(TennoMC.TAB_TENNO)
-                            .rarity(Rarity.RARE)));
+                            .rarity(Rarity.RARE)
+                            .stacksTo(16)));
 
     public static final RegistryObject<Item> PLASTIDS =
             ITEMS.register("plastids",

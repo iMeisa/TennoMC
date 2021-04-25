@@ -5,6 +5,7 @@ eb0f30a457450b718186518583b32bfe94afe0b1 assets/tennomc/blockstates/rubedo_depos
 722117ee92ad89c1293ab8021c8786dc2d6a9ab7 assets/tennomc/models/item/blueprint.json
 31cef76586ae7444540fd004f99cb654b4788b1d assets/tennomc/models/item/ferrite_deposit.json
 d78ddc538a547f7628330da59dad2e2a87a974b4 assets/tennomc/models/item/rubedo_deposit.json
+3031795e4e1f329289d99300ac887cd517a5ed3d assets/tennomc/models/item/skana.json
 b3200cddad90d788f88da8fc32a7f7a3924601a7 data/tennomc/advancements/recipes/tabtenno/blueprint.json
 95519c692aabeceab7a46bdeb7c51e64c1daf959 data/tennomc/advancements/recipes/tabtenno/ether_sword_blueprint.json
 bee106e792270bd09a2097350cc1f5b8e43fac99 data/tennomc/advancements/recipes/tabtenno/skana_blueprint.json

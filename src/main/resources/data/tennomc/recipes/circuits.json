@@ -8,5 +8,8 @@
     "x": { "item": "minecraft:redstone"},
     "y": { "item": "tennomc:salvage" }
   },
-  "result": { "item": "tennomc:circuits" }
+  "result": {
+    "item": "tennomc:circuits",
+    "count": 3
+  }
 }

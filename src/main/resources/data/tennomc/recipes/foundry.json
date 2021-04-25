@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sss",
+    "fcf",
+    "aaa"
+  ],
+  "key": {
+    "s": { "item": "tennomc:salvage"},
+    "f": { "item": "tennomc:ferrite" },
+    "c": { "item": "tennomc:circuits" },
+    "a": { "item": "tennomc:alloy_plates" }
+  },
+  "result": { "item": "tennomc:foundry" }
+}
